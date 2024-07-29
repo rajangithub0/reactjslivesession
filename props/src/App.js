@@ -4,6 +4,7 @@ import Greeting from './components/Greeting';
 import Display from './components/Display';
 import From from './components/From';
 import { useState } from 'react';
+import Button from './components/Button';
 
 function App() {
   const user=[
@@ -24,13 +25,27 @@ function App() {
   }
   return (
     <div className="App">
+      <Button label="home"></Button>
+      <Button label="login"></Button>
+      <Button label="register"></Button>
+      <Button label="news"></Button>
       <Greeting name="rajan" massage="welcome to my first project in react" />
       {
         user.map(user=>(
           <Display user={user} />
         ))
       }
-      <From  addData={addData}/>
+      <div>
+        {
+          data.map(item=>(<div>{item.name},{item.age}</div>)
+          )
+        }
+        <From  addData={addData}/>
+      </div>
+      <button label="home"></button>
+      <button label="login"></button>
+      <button label="register"></button>
+      <button label="news"></button>
     </div>
   );
 }
