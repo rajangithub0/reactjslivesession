@@ -1,0 +1,12 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.errorpage{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(https://th.bing.com/th/id/OIP.Jb4XrrIxatYfB2DQxV0TngHaFs?rs=1&pid=ImgDetMain);
+    background-repeat: no-repeat;
+}
