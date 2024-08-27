@@ -1,16 +1,15 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const UsersList = () => {
     const [users, setUsers] = useState([])
     const fetchData = async () => {
         try {
-
             const resp = await axios.get('https://jsonplaceholder.typicode.com/users')
             setUsers(resp.data)
         } catch (error) {
             console.log(error);
-
         }
     }
     useEffect(() => {
@@ -25,6 +24,7 @@ const UsersList = () => {
                         <th>id</th>
                         <th>name</th>
                         <th>email</th>
+                        <th>Details</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -34,6 +34,9 @@ const UsersList = () => {
                                 <td>{item.id}</td>
                                 <td>{item.name}</td>
                                 <td>{item.email}</td>
+                                <td>
+                                    <Link to={`/details/${item.id}`}>Get Details</Link>
+                                </td>
                             </tr>
                         ))
                     }
