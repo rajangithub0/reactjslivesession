@@ -3,7 +3,7 @@ import Header from './Components/Header'
 import Home from './Components/Home'
 import Login from './Components/Login'
 import Register from './Components/Register'
-import UsersList from './Components/UsersList'
+// import UsersList from './Components/UsersList'
 import UserDetails from './Components/UserDetails'
 import Dashboard from './Components/Dashboard'
 import { useState } from 'react'
@@ -18,7 +18,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/login' element={<Login setLoggedIn={setLoggedIn} />} />
           <Route path='/register' element={<Register />} />
-          <Route path='userslist' element={<UsersList />} />
+          {/* <Route path='userslist' element={<UsersList />} /> */}
           <Route path='Details/:id' element={<UserDetails />} />
           <Route path='dashboard' element={<Dashboard />} />
         </Routes>

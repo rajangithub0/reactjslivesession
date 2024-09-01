@@ -1,11 +1,26 @@
-import React from 'react'
+import { Link, Route, Routes } from "react-router-dom";
+import UserList from "./UsersList";
+import Products from "./Products";
 
-const Dashboard = () => {
+function Dashboard() {
     return (
-        <div className='container'>
-            <h2>welcome to Dashboard</h2>
+        <div className="container">
+            <h3>Dashboard Component</h3>
+            <ul className="nav nav-tabs">
+
+                <li className="nav-item">
+                    <Link class="nav-link" to="list">Manage Users</Link>
+                </li>
+                <li className="nav-item">
+                    <Link class="nav-link" to="products">Manage Products</Link>
+                </li>
+            </ul>
+            <Routes>
+                <Route path="list" element={<UserList />} />
+                <Route path="products" element={<Products />} />
+            </Routes>
         </div>
-    )
+    );
 }
 
-export default Dashboard
+export default Dashboard;
